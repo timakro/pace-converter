@@ -13,6 +13,7 @@
       --bg-color: #f2cf90;
       --card-bg-color: #ffe4bb;
       --text-color: #332a21;
+      --border-color: #c6bbaf;
     }
 
     @media (min-width: 370px) {
@@ -45,7 +46,8 @@
 </head>
 
 <body
-  style="font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color); display: grid; grid-template-columns: minmax(100px, 200px) minmax(100px, 200px); justify-content: center; gap: 0.7rem; margin: 0.7rem;">
+  style="font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color); display: grid; grid-template-columns: repeat(2, minmax(100px, 200px)); justify-content: center; gap: 0.7rem; margin: 0.7rem;">
+
   <header style="grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 0.4rem;">
     <svg width="2rem" height="2rem" version="1.1" viewBox="0 0 1300 1300" xmlns="http://www.w3.org/2000/svg">
       <g>
@@ -62,10 +64,10 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">min/mile</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="mm1" step="1" min="0" max="99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
       :
       <input type="number" id="mm2" step="1" min="0" max="59" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
     </div>
   </div>
 
@@ -73,10 +75,10 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">min/km</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="mk1" step="1" min="0" max="99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
       :
       <input type="number" id="mk2" step="1" min="0" max="59" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
     </div>
   </div>
 
@@ -84,7 +86,7 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">mph</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="mph" step="0.01" min="0" max="99.99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 3em;">
     </div>
   </div>
 
@@ -92,7 +94,7 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">km/h</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="kmh" step="0.01" min="0" max="99.99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 3em;">
     </div>
   </div>
 
@@ -100,13 +102,13 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">miles and hours</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="mi0" step="0.01" min="0" max="99.99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 3em;">
       <span style="font-size: 1rem; align-self: center; margin: 0 0.4rem;">in</span>
       <input type="number" id="mi1" step="1" min="0" max="99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
       :
       <input type="number" id="mi2" step="1" min="0" max="59" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
     </div>
   </div>
 
@@ -114,13 +116,13 @@
     <h2 style="font-size: 1.2rem; margin: 0.5rem; text-align: center;">kilometers and hours</h2>
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="km0" step="0.01" min="0" max="99.99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 3em;">
       <span style="font-size: 1rem; align-self: center; margin: 0 0.4rem;">in</span>
       <input type="number" id="km1" step="1" min="0" max="99" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
       :
       <input type="number" id="km2" step="1" min="0" max="59" required
-        style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
+        style="font-family: inherit; font-size: inherit; color: inherit; text-align: center; border: 1px solid var(--border-color); border-radius: 0.4rem; width: 1.5em;">
     </div>
   </div>
 
