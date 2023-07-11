@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pace Converter</title>
+  <meta name="description" content="Convert from minute miles to km/h and more">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
     :root {
@@ -44,8 +46,16 @@
 
 <body
   style="font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color); display: grid; grid-template-columns: minmax(100px, 200px) minmax(100px, 200px); justify-content: center; gap: 0.7rem; margin: 0.7rem;">
-  <header style="grid-column: 1 / -1;">
-    <h1 style="font-size: 1.7rem; margin: 0;">Pace Converter 🏃</h1>
+  <header style="grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 0.4rem;">
+    <svg width="2rem" height="2rem" version="1.1" viewBox="0 0 1300 1300" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <circle cx="650" cy="650" r="465.38" fill="#95bde4" />
+        <path
+          d="m903.72 1020.7c-23.685-27.397 3.1964-66.659-18.39-98.782-4.9912-34.192-26.074-63.257-36.4-92.891-12.568-20.973-22.822-41.483-28.071-63.142 9.0789-36.698-30.914-37.847-53.119-52.119-29.09-2.5294-60.628-40.633-86.188-19.146-11.958 14.259-19.418 34.454-30.175 45.353-28.257 29.025-48.631 68.88-83.541 92.375-75.191 18.723-154.5 2.9129-230.54 17.213-37.591-5.5739-69.654 45.349-86.108 48.848-9.8973-12.679-56.514 40.401-57.52-5.2922 2.4628-46.188 53.986-57.271 72.712-93.106 31.296-35.172 47.858 34.706 82.291 3.0171 39.786-13.662 79.227-30.269 120.94-35.699 34.102 5.6537 84.423 10.422 80.177-38.31 9.5005-36.817 43.894-64.185 36.94-104.87-4.9183-49.89 49.642-76.355 57.027-115.91 2.7877-31.254 18.451-70.223-27.262-73.934-32.427-10.674-71.616-48.213-22.963-68.001 26.389-26.675 75.415-22.479 82.68-65.116 24.77-2.5823 61.2-22.803 28.434-45.585-24.329-33.263-24.444-95.667 21.749-109.98 32.316-12.735 93.633-9.8645 98.477 33.043-17.879 24.946 4.3809 56.24-1.0067 78.945-8.1739 22.446-14.747 48.086-44.417 49.798-24.186 38.327 19.879 27.046 38.209 18.946 44.36 42.28-31.096 69.114-31.079 110.81-8.4907 40.875-13.102 82.914-29.326 121.99-12.943 42.986 39.248 63.743 68.518 82.295 17.115 26.736 50.341 40.571 57.965 74.104 14.953 35.062 27.573 72.703 26.468 111.66 8.505 41.403 11.984 88.451 38.508 122.43 26.513 7.2862 51.357 27.208 82.536 20.722 34.2 28.241-34.652 49.529-56.662 46.059-22.26-9.5492-49.463 13.305-70.87 4.2869z"
+          fill="#332a21" />
+      </g>
+    </svg>
+    <h1 style="font-size: 1rem; margin: 0;">Pace Converter</h1>
   </header>
 
   <div style="background-color: var(--card-bg-color); border-radius: 0.5rem;">
@@ -91,7 +101,7 @@
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="mi0" step="0.01" min="0" max="99.99" required
         style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
-      <span style="font-size: 1.2rem; align-self: center; margin: 0 0.2rem;">in</span>
+      <span style="font-size: 1rem; align-self: center; margin: 0 0.4rem;">in</span>
       <input type="number" id="mi1" step="1" min="0" max="99" required
         style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
       :
@@ -105,7 +115,7 @@
     <div style="display: flex; justify-content: center; gap: 0.2rem; font-size: 1.7rem; margin: 0.7rem;">
       <input type="number" id="km0" step="0.01" min="0" max="99.99" required
         style="font-family: inherit; font-size: inherit; color: inherit; width: 3em; text-align: center;">
-      <span style="font-size: 1.2rem; align-self: center; margin: 0 0.2rem;">in</span>
+      <span style="font-size: 1rem; align-self: center; margin: 0 0.4rem;">in</span>
       <input type="number" id="km1" step="1" min="0" max="99" required
         style="font-family: inherit; font-size: inherit; color: inherit; width: 1.5em; text-align: center;">
       :
@@ -197,7 +207,7 @@
         setDistance(kmh, 60 / minutesPerMile * KmPerMile);
         km0.value = km1.value = km2.value = '';
       }
-    }
+    };
 
     km0.onchange = km1.onchange = km2.onchange = () => {
       if (km0.reportValidity() && km1.reportValidity() && km2.reportValidity()) {
@@ -208,7 +218,7 @@
         setDistance(kmh, 60 / minutesPerKm);
         mi0.value = mi1.value = mi2.value = '';
       }
-    }
+    };
 
     /* ergonomics */
 
@@ -273,9 +283,9 @@
     combinedInput(km0, km1, km2);
   </script>
 
-  <footer style="grid-column: 1 / -1; font-size: 0.7rem;">
-    Made by <a href="https://github.com/timakro">Tim</a>.
-    Code on <a href="https://github.com/timakro/pace-converter">GitHub</a>.
+  <footer style="grid-column: 1 / -1; font-size: 0.7rem; text-align: center;">
+    Made by <a href="https://github.com/timakro">Tim</a> &middot;
+    Code on <a href="https://github.com/timakro/pace-converter">GitHub</a>
   </footer>
 </body>
 
